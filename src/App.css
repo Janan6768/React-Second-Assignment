@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .top-div {
   text-align: center;
 }
@@ -13,6 +18,7 @@
   text-align: center;
   column-gap: 70px;
   flex-wrap: wrap;
+  margin: 2rem 0;
 }
 .main-container h2 {
   color: green;
