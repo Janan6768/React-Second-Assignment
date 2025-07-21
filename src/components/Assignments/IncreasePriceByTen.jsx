@@ -1,9 +1,10 @@
 // 3) Show all products after increasing their price by 10%.
 
 function IncreasePriceByTen({ products2 }) {
+  let percentage = 10;
   let updatePrice = products2.map((p) => ({
     ...p,
-    increasedPrice: (p.price * 1.10).toFixed(2),
+    increasedPrice: (p.price * (1 + percentage / 100)).toFixed(2),
   }));
   // console.log(updatePrice);
   return (
@@ -15,7 +16,7 @@ function IncreasePriceByTen({ products2 }) {
             <h2>{p.name}</h2>
             <p>Original Price : {p.price}</p>
             <p>Increased Price : {p.increasedPrice}</p>
-            <span style={{color:p.status ? 'blue' : 'red'}}>
+            <span style={{ color: p.status ? "blue" : "red" }}>
               <p>{p.status ? "Availible" : "Not Availible"}</p>
             </span>
           </div>
